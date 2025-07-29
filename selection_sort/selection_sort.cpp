@@ -15,4 +15,10 @@ int main() {
             }
         }
     }
+
+    for(int num: arr) {
+        cout << num << " "; // Print the sorted array
+    }
+    cout << endl;
+    return 0;
 }
