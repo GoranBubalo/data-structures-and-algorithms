@@ -1,28 +1,29 @@
 #include <iostream>
 using namespace std;
 
-// Linear search 
-int main() {
-    int arr[] = {3, 7, 9, 1, 4, 8};
-    int n = sizeof(arr) / sizeof(arr[0]);
 
-    int x;
-    cout << "Enter number to search: ";
-    cin >> x;
-
-    bool found = false;
-
-    for (int i = 0; i < n; i++) {
-        if (arr[i] == x) {
-            cout << "Found at index " << i << endl;
-            found = true;
-            break;
+int linearSearch(int arr[], int size, int target) {
+    for(int i = 0; i < size; i++) {
+        if(arr[i] == target) {
+            cout << "Element found at index: " << i << endl;
+            return i;
         }
     }
+    
+    return -1; 
+}
 
-    if (!found) {
-        cout << "Not found" << endl;
+// Linear search algorithm
+int main() {
+    int numbers[] = {54, 2, 76, 33, 0, 2, 1, 85}; // Array of numbers
+    int size = sizeof(numbers) / sizeof(numbers[0]); // Calculate the size of the array
+    int target = 2; 
+
+    int index = linearSearch(numbers, size, target); // Call the linear search function
+
+    if(index == -1) {
+        cout << "Element not found in the array." << endl; // Element not found
+    } else {
+        cout << "Element " << target << " found at index: " << index << endl; // Element found
     }
-
-    return 0;
 }
