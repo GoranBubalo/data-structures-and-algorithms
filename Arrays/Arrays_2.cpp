@@ -3,7 +3,7 @@ using namespace std;
 
 
 // Reverse an array without creating a new array 
-// twwo-pointer technique
+// two-pointer technique
 int main() {
     int arr[] = {5, 10, 15, 20, 25};
     int n = sizeof(arr) / sizeof(arr[0]);
